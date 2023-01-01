@@ -21,10 +21,10 @@ public class FileOptionsScreen implements Screen {
 
     public FileOptionsScreen() {
     	
-    	options.add("1. Add a File");
-        options.add("2. Delete A File");
-        options.add("3. Search A File");
-        options.add("4. Return to Menu");
+    	options.add("1. Add File");
+        options.add("2. Delete  File");
+        options.add("3. Search  File");
+        options.add("4. Return  back");
         
     }
     
@@ -87,11 +87,11 @@ public class FileOptionsScreen implements Screen {
     // Finished TODO
 
     public void AddFile() {
-        System.out.println("Please Enter the Filename:");
+        System.out.println(" Enter  Filename:");
 
         String fileName = this.getInputString();
 
-        System.out.println("You are adding a file named: " + fileName);
+        System.out.println("file add successfuly: " + fileName);
         
 		try {
 			Path path = FileSystems.getDefault().getPath(Directory.name + fileName).toAbsolutePath();
@@ -102,7 +102,7 @@ public class FileOptionsScreen implements Screen {
 		    	  dir.getFiles().add(file);
 		    	  
 		      } else {
-		        System.out.println("This File Already Exits, no need to add another");
+		        System.out.println(" File has Already Exits");
 		      }
 		}catch (IOException e){
 			System.out.println(e);
@@ -113,11 +113,11 @@ public class FileOptionsScreen implements Screen {
     
     public void DeleteFile() {
     	
-    	System.out.println("Please Enter the Filename:");
+    	System.out.println("Enter Filename:");
 
         String fileName = this.getInputString();
 
-        System.out.println("You are deleting a file named: " + fileName);
+        System.out.println("1 file has deleted: " + fileName);
         
         
 	    //TODO: Delete file
@@ -129,7 +129,7 @@ public class FileOptionsScreen implements Screen {
 	    	  System.out.println("Deleted File: " + file.getName());
 	    	  dir.getFiles().remove(file);
 	      } else {
-	        System.out.println("Failed to delete file:" + fileName + ", file was not found.");
+	        System.out.println("Failed to delete file:" + fileName + ", file isn't found.");
 	      }
     }
     
@@ -137,11 +137,11 @@ public class FileOptionsScreen implements Screen {
     	
     	Boolean found = false;
     	
-    	System.out.println("Please Enter the Filename:");
+    	System.out.println(" Ente Filename:");
 
         String fileName = this.getInputString();
 
-        System.out.println("You are searching for a file named: " + fileName);
+        System.out.println("You are searching for a file: " + fileName);
         
         //TODO Fix it so ArrayList obtains files
         //Finished TODO
@@ -175,7 +175,7 @@ public class FileOptionsScreen implements Screen {
             returnOption = in.nextInt();
         }
         catch (InputMismatchException ex) {
-        	System.out.println("Invalid input");
+        	System.out.println("Invalid option");
         }
         return returnOption;
 
