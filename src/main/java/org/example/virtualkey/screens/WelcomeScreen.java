@@ -10,16 +10,16 @@ import java.util.Scanner;
 
 public class WelcomeScreen implements Screen {
 
-    private String welcomeText = "Welcome to VirtualKey!";
-    private String developerText = "Developer: Melvin Wu";
+    private String welcomeText = "Welcome to VirtualKey assessment";
+    private String developerText = "Developer: aswaji";
 
     private ArrayList<String> options = new ArrayList<>();
 
 
     public WelcomeScreen() {
-        options.add("1. Show Files");
+        options.add("1. Show Files list");
         options.add("2. Show File Options Menu");
-        options.add("3. Quit");
+        options.add("3. escap");
 
     }
     
